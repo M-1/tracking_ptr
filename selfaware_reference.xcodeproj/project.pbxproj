@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		006167A71B713D0B004B160B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167A61B713D0B004B160B /* main.cpp */; };
 		006167A91B713D0B004B160B /* selfaware_reference.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 006167A81B713D0B004B160B /* selfaware_reference.1 */; };
-		006167B11B713D23004B160B /* sa_ref.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167AF1B713D23004B160B /* sa_ref.cpp */; };
-		006167B41B714181004B160B /* tracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167B21B714181004B160B /* tracker.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,11 +28,9 @@
 		006167A31B713D0B004B160B /* selfaware_reference */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = selfaware_reference; sourceTree = BUILT_PRODUCTS_DIR; };
 		006167A61B713D0B004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		006167A81B713D0B004B160B /* selfaware_reference.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = selfaware_reference.1; sourceTree = "<group>"; };
-		006167AF1B713D23004B160B /* sa_ref.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sa_ref.cpp; sourceTree = "<group>"; };
-		006167B01B713D23004B160B /* sa_ref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sa_ref.h; sourceTree = "<group>"; };
-		006167B21B714181004B160B /* tracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tracker.cpp; sourceTree = "<group>"; };
-		006167B31B714181004B160B /* tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracker.h; sourceTree = "<group>"; };
-		006167B61B7142ED004B160B /* ref_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ref_interface.h; sourceTree = "<group>"; };
+		006167B01B713D23004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
+		006167B31B714181004B160B /* tracked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
+		006167B61B7142ED004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +65,9 @@
 			children = (
 				006167A61B713D0B004B160B /* main.cpp */,
 				006167A81B713D0B004B160B /* selfaware_reference.1 */,
-				006167B61B7142ED004B160B /* ref_interface.h */,
-				006167AF1B713D23004B160B /* sa_ref.cpp */,
-				006167B01B713D23004B160B /* sa_ref.h */,
-				006167B21B714181004B160B /* tracker.cpp */,
-				006167B31B714181004B160B /* tracker.h */,
+				006167B61B7142ED004B160B /* tracking_ptr_iface.h */,
+				006167B01B713D23004B160B /* tracking_ptr.h */,
+				006167B31B714181004B160B /* tracked.h */,
 			);
 			path = selfaware_reference;
 			sourceTree = "<group>";
@@ -130,8 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				006167A71B713D0B004B160B /* main.cpp in Sources */,
-				006167B11B713D23004B160B /* sa_ref.cpp in Sources */,
-				006167B41B714181004B160B /* tracker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

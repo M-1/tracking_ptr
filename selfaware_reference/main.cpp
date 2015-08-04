@@ -9,10 +9,10 @@
 #include <iostream>
 #include <memory>
 
-#include "sa_ref.h"
-#include "tracker.h"
+#include "tracking_ptr.h"
+#include "tracked.h"
 
-class C : public tracker {
+class C : public tracked {
 	int i_;
 	
 public:
@@ -36,16 +36,16 @@ int main(int argc, const char * argv[])
 	std::unique_ptr<C> i2(new C(2));
 
 	// Create reference to i1, pass it "invalidation function" to be called when the instance gets destructed
-	sar<C> r1_1(*i1, [](){std::cout << "! r1_1: i1 invalidated" << std::endl;});
+	tracking_ptr<C> r1_1(*i1, [](){std::cout << "! r1_1: i1 invalidated" << std::endl;});
 	
 	// Use the reference to work with the referenced instance
 	r1_1->print();
 	
 	// Create another refernece to i1
-	sar<C> r1_2(*i1, [](){std::cout << "! r1_2: i1 invalidated" << std::endl;});
+	tracking_ptr<C> r1_2(*i1, [](){std::cout << "! r1_2: i1 invalidated" << std::endl;});
 	
 	// Create reference to i2
-	sar<C> r2(*i2, [](){std::cout << "! r2: i2 invalidated" << std::endl;});
+	tracking_ptr<C> r2(*i2, [](){std::cout << "! r2: i2 invalidated" << std::endl;});
 	
 	// Work with the references
 	r1_1->print();

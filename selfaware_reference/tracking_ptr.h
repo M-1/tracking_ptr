@@ -12,12 +12,12 @@
 #include <iostream>
 #include <functional>
 
-#include "ref_interface.h"
+#include "tracking_ptr_iface.h"
 
 template <typename T>
-class sar : public ref {
+class tracking_ptr : public tracking_ptr_iface {
 public:
-	sar(T & ref, std::function<void()> on_invalidation) : ref_(&ref), on_invalidation_(on_invalidation) {
+	tracking_ptr(T & ref, std::function<void()> on_invalidation) : ref_(&ref), on_invalidation_(on_invalidation) {
 		std::cout << "sar: ctor" << std::endl;
 		// register to tracker
 		ref_->track(*this);
@@ -27,7 +27,7 @@ public:
 	//  - on copy: register the copy
 	//  - on move: unregister the original, register the new
 	
-	~sar() {
+	~tracking_ptr() {
 		std::cout << "sar: dtor" << std::endl;
 		// unregister from tracker
 		if (ref_) {

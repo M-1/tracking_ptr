@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-class ref {
+class tracking_ptr_iface {
 public:
 	virtual void origin_died() = 0;
 };
