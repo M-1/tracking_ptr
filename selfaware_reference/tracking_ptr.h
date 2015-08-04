@@ -18,7 +18,7 @@ template <typename T>
 class tracking_ptr : public tracking_ptr_iface {
 public:
 	tracking_ptr(T & ref, std::function<void()> on_invalidation) : ref_(&ref), on_invalidation_(on_invalidation) {
-		std::cout << "sar: ctor" << std::endl;
+		std::cout << "tracking_ptr: ctor" << std::endl;
 		// register to tracker
 		ref_->track(*this);
 	}
@@ -28,20 +28,20 @@ public:
 	//  - on move: unregister the original, register the new
 	
 	~tracking_ptr() {
-		std::cout << "sar: dtor" << std::endl;
+		std::cout << "tracking_ptr: dtor" << std::endl;
 		// unregister from tracker
 		if (ref_) {
 			ref_->free(*this);
 		}
 	}
 	
-	/*T & get() {
-		std::cout << "get" << std::endl;
+	T * get() {
+		std::cout << "tracking_ptr: get" << std::endl;
 		return ref_;
-	}*/
+	}
 	
 	T * operator -> () {
-		std::cout << "sar: ->" << std::endl;
+		std::cout << "tracking_ptr: ->" << std::endl;
 		if (ref_) {
 			return ref_;
 		} else {
@@ -50,7 +50,7 @@ public:
 	}
 	
 	virtual void origin_died() override {
-		std::cout << "sar: origin_died" << std::endl;
+		std::cout << "tracking_ptr: origin_died" << std::endl;
 		on_invalidation_();
 		ref_ = nullptr;
 	}
