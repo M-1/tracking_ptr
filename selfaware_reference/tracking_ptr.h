@@ -1,13 +1,10 @@
 //
-//  sa_ref.h
-//  selfaware_reference
-//
-//  Created by a on 04/08/15.
-//  Copyright (c) 2015 a. All rights reserved.
+//  tracking_ptr.h
+//  tracking_ptr
 //
 
-#ifndef __selfaware_reference__sa_ref__
-#define __selfaware_reference__sa_ref__
+#ifndef __tracking_ptr__tracking_ptr_h__
+#define __tracking_ptr__tracking_ptr_h__
 
 #include <iostream>
 #include <functional>
@@ -60,4 +57,4 @@ protected:
 	std::function<void()> on_invalidation_;
 };
 
-#endif /* defined(__selfaware_reference__sa_ref__) */
+#endif

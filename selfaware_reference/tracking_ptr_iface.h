@@ -1,13 +1,10 @@
 //
-//  ref_interface.h
-//  selfaware_reference
-//
-//  Created by a on 04/08/15.
-//  Copyright (c) 2015 a. All rights reserved.
+//  tracking_ptr_iface.h
+//  tracking_ptr
 //
 
-#ifndef __selfaware_reference__ref_interface__
-#define __selfaware_reference__ref_interface__
+#ifndef __tracking_ptr__tracking_ptr_iface_h__
+#define __tracking_ptr__tracking_ptr_iface_h__
 
 #include <iostream>
 
@@ -16,4 +13,4 @@ public:
 	virtual void origin_died() = 0;
 };
 
-#endif /* defined(__selfaware_reference__ref_interface__) */
+#endif

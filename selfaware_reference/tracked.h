@@ -1,13 +1,10 @@
 //
-//  ref_tracker.h
-//  selfaware_reference
-//
-//  Created by a on 04/08/15.
-//  Copyright (c) 2015 a. All rights reserved.
+//  tracked.h
+//  tracking_ptr
 //
 
-#ifndef __selfaware_reference__ref_tracker__
-#define __selfaware_reference__ref_tracker__
+#ifndef __tracking_ptr__tracked_h__
+#define __tracking_ptr__tracked_h__
 
 #include <iostream>
 #include <set>
@@ -39,4 +36,4 @@ protected:
 //! Syntactic sugar (for use in "class some_class : public tracked {...}")
 typedef ptr_tracker tracked;
 
-#endif /* defined(__selfaware_reference__ref_tracker__) */
+#endif
