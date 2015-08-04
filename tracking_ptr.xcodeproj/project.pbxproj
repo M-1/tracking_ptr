@@ -6,10 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		006167A71B713D0B004B160B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167A61B713D0B004B160B /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		006167A11B713D0B004B160B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		006167A31B713D0B004B160B /* tracking_ptr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tracking_ptr; sourceTree = BUILT_PRODUCTS_DIR; };
-		006167A61B713D0B004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		006167B01B713D23004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
-		006167B31B714181004B160B /* tracked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
-		006167B61B7142ED004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
+		006167B91B716B06004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		006167BA1B716B06004B160B /* tracked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
+		006167BB1B716B06004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
+		006167BC1B716B06004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +40,7 @@
 		0061679A1B713D0B004B160B = {
 			isa = PBXGroup;
 			children = (
-				006167A51B713D0B004B160B /* tracking_ptr */,
+				006167B81B716B06004B160B /* tracking_ptr */,
 				006167A41B713D0B004B160B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,16 +53,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		006167A51B713D0B004B160B /* tracking_ptr */ = {
+		006167B81B716B06004B160B /* tracking_ptr */ = {
 			isa = PBXGroup;
 			children = (
-				006167A61B713D0B004B160B /* main.cpp */,
-				006167B61B7142ED004B160B /* tracking_ptr_iface.h */,
-				006167B01B713D23004B160B /* tracking_ptr.h */,
-				006167B31B714181004B160B /* tracked.h */,
+				006167B91B716B06004B160B /* main.cpp */,
+				006167BA1B716B06004B160B /* tracked.h */,
+				006167BB1B716B06004B160B /* tracking_ptr.h */,
+				006167BC1B716B06004B160B /* tracking_ptr_iface.h */,
 			);
-			name = tracking_ptr;
-			path = selfaware_reference;
+			path = tracking_ptr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +115,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				006167A71B713D0B004B160B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
