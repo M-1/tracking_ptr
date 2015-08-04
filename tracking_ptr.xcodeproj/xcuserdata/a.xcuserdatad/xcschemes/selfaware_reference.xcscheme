@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "006167A21B713D0B004B160B"
                BuildableName = "selfaware_reference"
-               BlueprintName = "selfaware_reference"
-               ReferencedContainer = "container:selfaware_reference.xcodeproj">
+               BlueprintName = "tracking_ptr"
+               ReferencedContainer = "container:tracking_ptr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "006167A21B713D0B004B160B"
             BuildableName = "selfaware_reference"
-            BlueprintName = "selfaware_reference"
-            ReferencedContainer = "container:selfaware_reference.xcodeproj">
+            BlueprintName = "tracking_ptr"
+            ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "006167A21B713D0B004B160B"
             BuildableName = "selfaware_reference"
-            BlueprintName = "selfaware_reference"
-            ReferencedContainer = "container:selfaware_reference.xcodeproj">
+            BlueprintName = "tracking_ptr"
+            ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "006167A21B713D0B004B160B"
             BuildableName = "selfaware_reference"
-            BlueprintName = "selfaware_reference"
-            ReferencedContainer = "container:selfaware_reference.xcodeproj">
+            BlueprintName = "tracking_ptr"
+            ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

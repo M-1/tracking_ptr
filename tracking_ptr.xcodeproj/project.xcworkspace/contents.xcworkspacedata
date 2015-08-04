@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:selfaware_reference.xcodeproj">
+      location = "self:tracking_ptr.xcodeproj">
    </FileRef>
 </Workspace>

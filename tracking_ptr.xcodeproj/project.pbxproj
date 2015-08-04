@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		006167A71B713D0B004B160B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167A61B713D0B004B160B /* main.cpp */; };
-		006167A91B713D0B004B160B /* selfaware_reference.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 006167A81B713D0B004B160B /* selfaware_reference.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +17,14 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				006167A91B713D0B004B160B /* selfaware_reference.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		006167A31B713D0B004B160B /* selfaware_reference */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = selfaware_reference; sourceTree = BUILT_PRODUCTS_DIR; };
+		006167A31B713D0B004B160B /* tracking_ptr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tracking_ptr; sourceTree = BUILT_PRODUCTS_DIR; };
 		006167A61B713D0B004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		006167A81B713D0B004B160B /* selfaware_reference.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = selfaware_reference.1; sourceTree = "<group>"; };
 		006167B01B713D23004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
 		006167B31B714181004B160B /* tracked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
 		006167B61B7142ED004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
@@ -47,7 +44,7 @@
 		0061679A1B713D0B004B160B = {
 			isa = PBXGroup;
 			children = (
-				006167A51B713D0B004B160B /* selfaware_reference */,
+				006167A51B713D0B004B160B /* tracking_ptr */,
 				006167A41B713D0B004B160B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,29 +52,29 @@
 		006167A41B713D0B004B160B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				006167A31B713D0B004B160B /* selfaware_reference */,
+				006167A31B713D0B004B160B /* tracking_ptr */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		006167A51B713D0B004B160B /* selfaware_reference */ = {
+		006167A51B713D0B004B160B /* tracking_ptr */ = {
 			isa = PBXGroup;
 			children = (
 				006167A61B713D0B004B160B /* main.cpp */,
-				006167A81B713D0B004B160B /* selfaware_reference.1 */,
 				006167B61B7142ED004B160B /* tracking_ptr_iface.h */,
 				006167B01B713D23004B160B /* tracking_ptr.h */,
 				006167B31B714181004B160B /* tracked.h */,
 			);
+			name = tracking_ptr;
 			path = selfaware_reference;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		006167A21B713D0B004B160B /* selfaware_reference */ = {
+		006167A21B713D0B004B160B /* tracking_ptr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "selfaware_reference" */;
+			buildConfigurationList = 006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */;
 			buildPhases = (
 				0061679F1B713D0B004B160B /* Sources */,
 				006167A01B713D0B004B160B /* Frameworks */,
@@ -87,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = selfaware_reference;
+			name = tracking_ptr;
 			productName = selfaware_reference;
-			productReference = 006167A31B713D0B004B160B /* selfaware_reference */;
+			productReference = 006167A31B713D0B004B160B /* tracking_ptr */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +98,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = a;
 			};
-			buildConfigurationList = 0061679E1B713D0B004B160B /* Build configuration list for PBXProject "selfaware_reference" */;
+			buildConfigurationList = 0061679E1B713D0B004B160B /* Build configuration list for PBXProject "tracking_ptr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				006167A21B713D0B004B160B /* selfaware_reference */,
+				006167A21B713D0B004B160B /* tracking_ptr */,
 			);
 		};
 /* End PBXProject section */
@@ -203,21 +200,21 @@
 		006167AD1B713D0B004B160B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = tracking_ptr;
 			};
 			name = Debug;
 		};
 		006167AE1B713D0B004B160B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = tracking_ptr;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0061679E1B713D0B004B160B /* Build configuration list for PBXProject "selfaware_reference" */ = {
+		0061679E1B713D0B004B160B /* Build configuration list for PBXProject "tracking_ptr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				006167AA1B713D0B004B160B /* Debug */,
@@ -226,7 +223,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "selfaware_reference" */ = {
+		006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				006167AD1B713D0B004B160B /* Debug */,
