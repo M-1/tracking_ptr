@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>selfaware_reference.xcscheme</key>
+		<key>tracking_ptr.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>006167A21B713D0B004B160B</key>
+		<key>006167C51B7219A8004B160B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

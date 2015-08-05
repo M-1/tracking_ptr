@@ -6,8 +6,12 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		006167CA1B7219A8004B160B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 006167C91B7219A8004B160B /* main.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		006167A11B713D0B004B160B /* CopyFiles */ = {
+		006167C41B7219A8004B160B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -19,15 +23,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		006167A31B713D0B004B160B /* tracking_ptr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tracking_ptr; sourceTree = BUILT_PRODUCTS_DIR; };
-		006167B91B716B06004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		006167BA1B716B06004B160B /* tracked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
-		006167BB1B716B06004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
-		006167BC1B716B06004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
+		006167C61B7219A8004B160B /* tracking_ptr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tracking_ptr; sourceTree = BUILT_PRODUCTS_DIR; };
+		006167C91B7219A8004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		006167D21B721A18004B160B /* tracked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
+		006167D31B721A18004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
+		006167D41B721A18004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		006167A01B713D0B004B160B /* Frameworks */ = {
+		006167C31B7219A8004B160B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,29 +41,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0061679A1B713D0B004B160B = {
+		006167BD1B7219A8004B160B = {
 			isa = PBXGroup;
 			children = (
-				006167B81B716B06004B160B /* tracking_ptr */,
-				006167A41B713D0B004B160B /* Products */,
+				006167C81B7219A8004B160B /* tracking_ptr */,
+				006167C71B7219A8004B160B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		006167A41B713D0B004B160B /* Products */ = {
+		006167C71B7219A8004B160B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				006167A31B713D0B004B160B /* tracking_ptr */,
+				006167C61B7219A8004B160B /* tracking_ptr */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		006167B81B716B06004B160B /* tracking_ptr */ = {
+		006167C81B7219A8004B160B /* tracking_ptr */ = {
 			isa = PBXGroup;
 			children = (
-				006167B91B716B06004B160B /* main.cpp */,
-				006167BA1B716B06004B160B /* tracked.h */,
-				006167BB1B716B06004B160B /* tracking_ptr.h */,
-				006167BC1B716B06004B160B /* tracking_ptr_iface.h */,
+				006167C91B7219A8004B160B /* main.cpp */,
+				006167D21B721A18004B160B /* tracked.h */,
+				006167D31B721A18004B160B /* tracking_ptr_iface.h */,
+				006167D41B721A18004B160B /* tracking_ptr.h */,
 			);
 			path = tracking_ptr;
 			sourceTree = "<group>";
@@ -67,61 +71,62 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		006167A21B713D0B004B160B /* tracking_ptr */ = {
+		006167C51B7219A8004B160B /* tracking_ptr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */;
+			buildConfigurationList = 006167CF1B7219A8004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */;
 			buildPhases = (
-				0061679F1B713D0B004B160B /* Sources */,
-				006167A01B713D0B004B160B /* Frameworks */,
-				006167A11B713D0B004B160B /* CopyFiles */,
+				006167C21B7219A8004B160B /* Sources */,
+				006167C31B7219A8004B160B /* Frameworks */,
+				006167C41B7219A8004B160B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = tracking_ptr;
-			productName = selfaware_reference;
-			productReference = 006167A31B713D0B004B160B /* tracking_ptr */;
+			productName = tracking_ptr;
+			productReference = 006167C61B7219A8004B160B /* tracking_ptr */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0061679B1B713D0B004B160B /* Project object */ = {
+		006167BE1B7219A8004B160B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = a;
+				ORGANIZATIONNAME = "Martin Mi";
 			};
-			buildConfigurationList = 0061679E1B713D0B004B160B /* Build configuration list for PBXProject "tracking_ptr" */;
+			buildConfigurationList = 006167C11B7219A8004B160B /* Build configuration list for PBXProject "tracking_ptr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0061679A1B713D0B004B160B;
-			productRefGroup = 006167A41B713D0B004B160B /* Products */;
+			mainGroup = 006167BD1B7219A8004B160B;
+			productRefGroup = 006167C71B7219A8004B160B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				006167A21B713D0B004B160B /* tracking_ptr */,
+				006167C51B7219A8004B160B /* tracking_ptr */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0061679F1B713D0B004B160B /* Sources */ = {
+		006167C21B7219A8004B160B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006167CA1B7219A8004B160B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		006167AA1B713D0B004B160B /* Debug */ = {
+		006167CD1B7219A8004B160B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -159,7 +164,7 @@
 			};
 			name = Debug;
 		};
-		006167AB1B713D0B004B160B /* Release */ = {
+		006167CE1B7219A8004B160B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -191,41 +196,42 @@
 			};
 			name = Release;
 		};
-		006167AD1B713D0B004B160B /* Debug */ = {
+		006167D01B7219A8004B160B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = tracking_ptr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		006167AE1B713D0B004B160B /* Release */ = {
+		006167D11B7219A8004B160B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = tracking_ptr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0061679E1B713D0B004B160B /* Build configuration list for PBXProject "tracking_ptr" */ = {
+		006167C11B7219A8004B160B /* Build configuration list for PBXProject "tracking_ptr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				006167AA1B713D0B004B160B /* Debug */,
-				006167AB1B713D0B004B160B /* Release */,
+				006167CD1B7219A8004B160B /* Debug */,
+				006167CE1B7219A8004B160B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		006167AC1B713D0B004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */ = {
+		006167CF1B7219A8004B160B /* Build configuration list for PBXNativeTarget "tracking_ptr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				006167AD1B713D0B004B160B /* Debug */,
-				006167AE1B713D0B004B160B /* Release */,
+				006167D01B7219A8004B160B /* Debug */,
+				006167D11B7219A8004B160B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0061679B1B713D0B004B160B /* Project object */;
+	rootObject = 006167BE1B7219A8004B160B /* Project object */;
 }

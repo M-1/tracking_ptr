@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "006167A21B713D0B004B160B"
-               BuildableName = "selfaware_reference"
+               BlueprintIdentifier = "006167C51B7219A8004B160B"
+               BuildableName = "tracking_ptr"
                BlueprintName = "tracking_ptr"
                ReferencedContainer = "container:tracking_ptr.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "006167A21B713D0B004B160B"
-            BuildableName = "selfaware_reference"
+            BlueprintIdentifier = "006167C51B7219A8004B160B"
+            BuildableName = "tracking_ptr"
             BlueprintName = "tracking_ptr"
             ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
@@ -51,8 +51,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "006167A21B713D0B004B160B"
-            BuildableName = "selfaware_reference"
+            BlueprintIdentifier = "006167C51B7219A8004B160B"
+            BuildableName = "tracking_ptr"
             BlueprintName = "tracking_ptr"
             ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
@@ -69,8 +69,8 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "006167A21B713D0B004B160B"
-            BuildableName = "selfaware_reference"
+            BlueprintIdentifier = "006167C51B7219A8004B160B"
+            BuildableName = "tracking_ptr"
             BlueprintName = "tracking_ptr"
             ReferencedContainer = "container:tracking_ptr.xcodeproj">
          </BuildableReference>
