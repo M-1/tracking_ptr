@@ -6,6 +6,7 @@
 #include <iostream>
 #include <memory>
 
+//#define TRACKING_PTR_ENABLE_LOGGING 1
 #include "tracking_ptr.h"
 #include "tracked.h"
 

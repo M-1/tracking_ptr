@@ -28,6 +28,7 @@
 		006167D21B721A18004B160B /* tracked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
 		006167D31B721A18004B160B /* tracking_ptr_iface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_iface.h; sourceTree = "<group>"; };
 		006167D41B721A18004B160B /* tracking_ptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr.h; sourceTree = "<group>"; };
+		006167D51B724901004B160B /* tracking_ptr_logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracking_ptr_logging.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 				006167D21B721A18004B160B /* tracked.h */,
 				006167D31B721A18004B160B /* tracking_ptr_iface.h */,
 				006167D41B721A18004B160B /* tracking_ptr.h */,
+				006167D51B724901004B160B /* tracking_ptr_logging.h */,
 			);
 			path = tracking_ptr;
 			sourceTree = "<group>";

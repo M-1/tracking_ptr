@@ -10,16 +10,17 @@
 #include <set>
 
 #include "tracking_ptr_iface.h"
+#include "tracking_ptr_logging.h"
 
 class ptr_tracker {
 public:
-	void track(tracking_ptr_iface & r){
-		std::cout << "tracker: track " << &r << std::endl;
+	void track(tracking_ptr_iface & r) {
+		TRACKING_PTR_LOG("tracker: track " << &r)
 		active_references_.emplace(&r);
 	}
 	
-	void free(tracking_ptr_iface & r){
-		std::cout << "tracker: free " << &r << std::endl;
+	void free(tracking_ptr_iface & r) {
+		TRACKING_PTR_LOG("tracker: free " << &r)
 		active_references_.erase(&r);
 	}
 	
