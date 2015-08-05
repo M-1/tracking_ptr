@@ -11,6 +11,7 @@
 class tracking_ptr_iface {
 public:
 	virtual void origin_died() = 0;
+	virtual ~tracking_ptr_iface() {}
 };
 
 #endif

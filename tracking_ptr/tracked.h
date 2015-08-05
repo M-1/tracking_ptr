@@ -25,6 +25,7 @@ public:
 	
 	~ptr_tracker() {
 		for (tracking_ptr_iface * r : active_references_) {
+			// TODO: wrap in try-catch block?
 			r->origin_died();
 		}
 	}
