@@ -15,7 +15,7 @@ class C : public tracked {
 	int i_;
 	
 public:
-	C(int i) : i_(i) {
+	explicit C(int i) : i_(i) {
 		std::cout << "C: ctor(" << i_ << ")" << std::endl;
 	}
 	

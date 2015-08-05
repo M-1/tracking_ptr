@@ -14,6 +14,20 @@
 
 class ptr_tracker {
 public:
+	ptr_tracker() : active_references_() {}
+	
+	//! Copying the tracked object does not make sense: Would referencing objects have to hold multiple references? Should they be informed about destruction of just one, or all copies?
+	ptr_tracker(const ptr_tracker & dummy) = delete;
+	
+	//! TODO: handle moving instead of disabling it: update all tracking_ptrs pointing to this
+	ptr_tracker(ptr_tracker && dummy) = delete;
+	
+	//! Deleted copy assignment
+	ptr_tracker & operator = (const ptr_tracker & dummy) = delete;
+	
+	//! TODO: handle moving
+	ptr_tracker & operator = (ptr_tracker && dummy) = delete;
+	
 	void track(tracking_ptr_iface & r) {
 		TRACKING_PTR_LOG("tracker: track " << &r)
 		active_references_.emplace(&r);
