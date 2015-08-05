@@ -35,7 +35,7 @@ void basic_example() {
 	std::unique_ptr<C> i1(new C(1));
 	std::unique_ptr<C> i2(new C(2));
 
-	// Create tracking pointer to i1, pass it "invalidation function" to be called when the instance gets destructed
+	// Create tracking pointer to i1, pass it an "invalidation function" to be called when the instance gets destructed
 	tracking_ptr<C> r1_1(*i1, [](){std::cout << "! r1_1: i1 invalidated" << std::endl;});
 	
 	// Use the pointer to work with the pointed-to instance
@@ -52,7 +52,7 @@ void basic_example() {
 	r1_2->print();
 	r2->print();
 	
-	// ... get the raw pointer and work with it instead
+	// ... get the raw pointer and work with that instead
 	{
 		C * cp = r2.get();
 		cp->print();
@@ -91,6 +91,8 @@ void basic_example() {
 	
 	// Destruction of i1 does nothing since the unique_ptr is already null
 }
+
+// TODO: even simpler basic_example: only one instance, ~two pointers, destroy the instance to trigger invalidation
 
 //! Copying and moving of tracking pointers
 void copy_move_example() {
