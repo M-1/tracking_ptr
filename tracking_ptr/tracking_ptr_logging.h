@@ -1,6 +1,7 @@
 //
 //  tracking_ptr_logging.h
 //  tracking_ptr
+//  Copyright (c) 2015, Martin Mi, released under BSD 3-Clause License (see LICENSE file for details)
 //
 
 #ifndef __tracking_ptr__tracking_ptr_logging_h__

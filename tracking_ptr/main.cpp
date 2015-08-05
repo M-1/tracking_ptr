@@ -1,6 +1,7 @@
 //
 //  main.cpp
 //  tracking_ptr
+//  Copyright (c) 2015, Martin Mi, released under BSD 3-Clause License (see LICENSE file for details)
 //
 
 #include <iostream>
