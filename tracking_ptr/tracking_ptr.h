@@ -12,6 +12,7 @@
 
 #include "tracking_ptr_iface.h"
 #include "tracking_ptr_logging.h"
+#include "tracked.h"
 
 template <typename T>
 class tracking_ptr : public tracking_ptr_iface {
@@ -21,8 +22,10 @@ public:
 	}
 	
 	//! Constructor for valid tracking_ptr creation
-	tracking_ptr(T & ref, std::function<void()> on_invalidation) : ref_(&ref), on_invalidation_(on_invalidation) {
+	tracking_ptr(T & ref, std::function<void(tracking_ptr &)> on_invalidation = nullptr) : ref_(&ref), on_invalidation_(on_invalidation) {
 		TRACKING_PTR_LOG("tracking_ptr: ctor")
+		//static_assert(std::is_base_of<tracked, T>::value, "Type T in tracking_ptr<T> must be derived from 'tracked'");
+		static_assert(std::is_convertible<T *, tracked *>::value, "Type T in tracking_ptr<T> must be (publicly) derived from 'tracked' aka 'ptr_tracker'");
 		// register to tracker
 		ref_->track(*this);
 	}
@@ -80,16 +83,24 @@ public:
 	
 	T * get() {
 		TRACKING_PTR_LOG("tracking_ptr: get")
-		return ref_;
+		return static_cast<T*>(ref_);
+	}
+	
+	T & operator * () const {
+		return static_cast<T &>(*ref_);
 	}
 	
 	T * operator -> () {
 		TRACKING_PTR_LOG("tracking_ptr: ->")
 		if (ref_) {
-			return ref_;
+			return static_cast<T*>(ref_);
 		} else {
 			throw std::runtime_error("invalid reference");
 		}
+	}
+	
+	bool operator < (const tracking_ptr & other) const {
+		return ref_ < other.ref_;
 	}
 	
 	// TODO: reset()
@@ -98,13 +109,18 @@ public:
 	
 	virtual void origin_died() override {
 		TRACKING_PTR_LOG("tracking_ptr: origin_died")
-		on_invalidation_();
+		if (on_invalidation_) {
+			on_invalidation_(*this);
+		} else {
+			TRACKING_PTR_LOG("tracking_ptr: origin_died: on_invalidation_ is null")
+		}
 		ref_ = nullptr;
+		on_invalidation_ = nullptr;
 	}
 	
 protected:
-	T * ref_;
-	std::function<void()> on_invalidation_;
+	tracked * ref_;
+	std::function<void(tracking_ptr &)> on_invalidation_;
 	// TODO: mutex for thread safety? (and in tracker too?)
 	
 private:

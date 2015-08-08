@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0035AFA21B753F5E00264277 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		006167C61B7219A8004B160B /* tracking_ptr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tracking_ptr; sourceTree = BUILT_PRODUCTS_DIR; };
 		006167C91B7219A8004B160B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		006167D21B721A18004B160B /* tracked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tracked.h; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		006167BD1B7219A8004B160B = {
 			isa = PBXGroup;
 			children = (
+				0035AFA21B753F5E00264277 /* README.md */,
 				006167C81B7219A8004B160B /* tracking_ptr */,
 				006167C71B7219A8004B160B /* Products */,
 			);
