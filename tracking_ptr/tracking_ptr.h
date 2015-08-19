@@ -19,12 +19,12 @@ class tracking_ptr : public tracking_ptr_iface {
 public:
 	//! Default ("empty/nullptr") constructor
 	tracking_ptr() : ref_(nullptr), on_invalidation_(nullptr) {
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": null ctor")
 	}
 	
 	//! Constructor for valid tracking_ptr creation
 	tracking_ptr(T & ref, std::function<void(tracking_ptr &)> on_invalidation = nullptr) : ref_(&ref), on_invalidation_(on_invalidation) {
-		TRACKING_PTR_LOG("tracking_ptr: ctor")
-		//static_assert(std::is_base_of<tracked, T>::value, "Type T in tracking_ptr<T> must be derived from 'tracked'");
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": ctor(" << &ref_ << ")")
 		static_assert(std::is_convertible<T *, tracked *>::value, "Type T in tracking_ptr<T> must be (publicly) derived from 'tracked' aka 'ptr_tracker'");
 		// register to tracker
 		ref_->track(*this);
@@ -32,7 +32,7 @@ public:
 	
 	//! Copy constructor
 	tracking_ptr(const tracking_ptr & other) : ref_(other.ref_), on_invalidation_(other.on_invalidation_) {
-		TRACKING_PTR_LOG("tracking_ptr: copy ctor (" << &other << ") -> " << this)
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": copy ctor (" << &other << ")")
 		// on copy: register the copied pointer
 		if (ref_) {
 			ref_->track(*this);
@@ -43,6 +43,8 @@ public:
 	
 	//! Copy assignment
 	tracking_ptr & operator = (const tracking_ptr & other) {
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": copy assignment = " << &other)
+		
 		if (&other == this) {
 			return *this;
 		}
@@ -53,7 +55,7 @@ public:
 	
 	//! Move constructor
 	tracking_ptr(tracking_ptr && other) : ref_(std::move(other.ref_)), on_invalidation_(std::move(other.on_invalidation_)) {
-		TRACKING_PTR_LOG("tracking_ptr: move ctor (" << &other << ") -> " << this)
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": move ctor (" << &other << ")")
 		// on move: unregister the original pointer, register the new pointer
 		ref_->free(other);
 		ref_->track(*this);
@@ -65,6 +67,8 @@ public:
 	
 	//! Move assignment
 	tracking_ptr & operator = (tracking_ptr && other) {
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": move assignment = " << &other)
+
 		if (&other == this) {
 			return *this;
 		}
@@ -74,7 +78,7 @@ public:
 	
 	//! Destructor
 	~tracking_ptr() {
-		TRACKING_PTR_LOG("tracking_ptr: dtor")
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": ~tracking_ptr")
 		// unregister from tracker
 		if (ref_) {
 			ref_->free(*this);
@@ -82,16 +86,17 @@ public:
 	}
 	
 	T * get() {
-		TRACKING_PTR_LOG("tracking_ptr: get")
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": get")
 		return static_cast<T*>(ref_);
 	}
 	
 	T & operator * () const {
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": *")
 		return static_cast<T &>(*ref_);
 	}
 	
 	T * operator -> () {
-		TRACKING_PTR_LOG("tracking_ptr: ->")
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": ->")
 		if (ref_) {
 			return static_cast<T*>(ref_);
 		} else {
@@ -100,6 +105,7 @@ public:
 	}
 	
 	bool operator < (const tracking_ptr & other) const {
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": <")
 		return ref_ < other.ref_;
 	}
 	
@@ -108,14 +114,17 @@ public:
 	// TODO: on_invalidation setter
 	
 	virtual void origin_died() override {
-		TRACKING_PTR_LOG("tracking_ptr: origin_died")
+		TRACKING_PTR_LOG("tracking_ptr " << this << ": origin_died")
 		if (on_invalidation_) {
-			on_invalidation_(*this);
+			// Invalidate the pointer
+			ref_ = nullptr;
+			// Call the invalidation handler
+			// (move it to a local variable (to stack) to avoid invalid access to it if it is deleted by on_invalidation_)
+			auto on_invalidation_local = std::move(on_invalidation_);
+			on_invalidation_local(*this);
 		} else {
-			TRACKING_PTR_LOG("tracking_ptr: origin_died: on_invalidation_ is null")
+			TRACKING_PTR_LOG("tracking_ptr " << this << ": origin_died: on_invalidation_ is null")
 		}
-		ref_ = nullptr;
-		on_invalidation_ = nullptr;
 	}
 	
 protected:

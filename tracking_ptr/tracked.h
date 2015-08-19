@@ -15,7 +15,9 @@
 
 class ptr_tracker {
 public:
-	ptr_tracker() : active_references_() {}
+	ptr_tracker() : active_references_() {
+		TRACKING_PTR_LOG("tracker " << this << ": ctor")
+	}
 	
 	//! Copying the tracked object does not make sense: Would referencing objects have to hold multiple references? Should they be informed about destruction of just one, or all copies?
 	ptr_tracker(const ptr_tracker & dummy) = delete;
@@ -29,17 +31,20 @@ public:
 	//! TODO: handle moving
 	ptr_tracker & operator = (ptr_tracker && dummy) = delete;
 	
+	// TODO: noexcept?
 	void track(tracking_ptr_iface & r) {
-		TRACKING_PTR_LOG("tracker: track " << &r)
+		TRACKING_PTR_LOG("tracker " << this << ": track(" << &r << ")")
 		active_references_.emplace(&r);
 	}
 	
+	// TODO: noexcept?
 	void free(tracking_ptr_iface & r) {
-		TRACKING_PTR_LOG("tracker: free " << &r)
+		TRACKING_PTR_LOG("tracker " << this << ": free(" << &r << ")")
 		active_references_.erase(&r);
 	}
 	
 	~ptr_tracker() {
+		TRACKING_PTR_LOG("tracker " << this << ": ~tracker")
 		for (tracking_ptr_iface * r : active_references_) {
 			// TODO: wrap in try-catch block?
 			r->origin_died();

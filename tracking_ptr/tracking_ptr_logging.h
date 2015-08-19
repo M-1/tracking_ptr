@@ -9,7 +9,7 @@
 
 #ifdef TRACKING_PTR_ENABLE_LOGGING
 // Log to std::clog
-#define TRACKING_PTR_LOG(x) std::clog << x << std::endl;
+#define TRACKING_PTR_LOG(x) std::clog << "tracking_ptr: " << x << std::endl;
 #else
 // Do not log
 #define TRACKING_PTR_LOG(x)
